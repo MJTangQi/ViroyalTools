@@ -21,10 +21,10 @@ Pod::Spec.new do |s|
     一些快速进行iOS开发的工具类和扩展
                         DESC
 
-    s.homepage         = 'https://github.com/MJTangQi/ViroyalTools'
+    s.homepage         = 'https://github.com/NJDevTangQi/ViroyalTools'
     s.license          = { :type => 'MIT', :file => 'LICENSE' }
     s.author           = { 'MJTangQi' => '824282017@qq.com' }
-    s.source           = { :git => 'https://github.com/MJTangQi/ViroyalTools.git', :tag => s.version.to_s }
+    s.source           = { :git => 'https://github.com/NJDevTangQi/ViroyalTools.git', :tag => s.version.to_s }
 
     s.ios.deployment_target = '10.0'
     s.source_files = 'ViroyalTools/Classes/*.{h,m}'
