@@ -41,7 +41,7 @@
     NSLog(@"%@ method: %@ url: %@", [self class], arr[method], url);
     NSLog(@"%@ headers: %@, parameters: %@", [self class], self.requestSerializer.HTTPRequestHeaders, parameters);
     
-#define HTTP_SUCCESS_LOG    NSLog(@"%@ success with url: %@ object: %@", [self class], url, responseObject);
+#define HTTP_SUCCESS_LOG    NSLog(@"%@ success with url: %@", [self class], url);
 #define HTTP_FAILURE_LOG    NSLog(@"%@ failed with url: %@ error: %@", [self class], url, [error localizedDescription]);
     
     if (method == HttpPost) {
