@@ -39,7 +39,7 @@
     static NSBundle *bundle;
     
     dispatch_once(&onceToken, ^{
-        NSBundle *frameworkBundle = [NSBundle bundleWithIdentifier:@"org.cocoapods.VICocoaTools"];
+        NSBundle *frameworkBundle = [NSBundle bundleWithIdentifier:@"org.cocoapods.ViroyalTools"];
         NSString *path = [frameworkBundle pathForResource:@"VICocoaTools" ofType:@"bundle"];
         bundle = [NSBundle bundleWithPath:path];
     });
