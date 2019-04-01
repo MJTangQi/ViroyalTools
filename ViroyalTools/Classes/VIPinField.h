@@ -10,8 +10,6 @@
 #import "UIView+Shake.h"
 #import <Masonry/Masonry.h>
 
-@import Masonry;
-
 @class VIPinField;
 
 @protocol VIPinFieldDelegate <NSObject>
