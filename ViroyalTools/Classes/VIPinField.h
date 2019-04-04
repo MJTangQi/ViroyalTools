@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "UIView+Shake.h"
 
-@import Masonry
+@import Masonry;
 @class VIPinField;
 
 @protocol VIPinFieldDelegate <NSObject>
