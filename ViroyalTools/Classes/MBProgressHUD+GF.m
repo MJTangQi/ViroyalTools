@@ -27,7 +27,7 @@
         [hud setMode:mode];
     }
     hud.detailsLabel.text = message;
-    hud.detailsLabel.font = [UIFont boldSystemFontOfSize:16];
+    hud.detailsLabelFont = [UIFont boldSystemFontOfSize:16];
     if (delayHide) {
         [hud hideAnimated:YES afterDelay:PROGRESS_DELAY_HIDE];
     }
@@ -53,7 +53,7 @@
         message = success?GFLocalizedString(@"Success", nil):GFLocalizedString(@"Failed", nil);
     }
     hud.detailsLabel.text = message;
-    hud.detailsLabel.font = [UIFont boldSystemFontOfSize:16];
+    hud.detailsLabelFont = [UIFont boldSystemFontOfSize:16];
     if (delayHide) {
         [hud hideAnimated:YES afterDelay:PROGRESS_DELAY_HIDE];
     }
@@ -67,7 +67,7 @@
                         hud:(MBProgressHUD *)hud
                   labelText:(NSString *)labelText
                  completion:(void (^)(void))completionBlock {
-    hud.detailsLabel.font = [UIFont boldSystemFontOfSize:16];
+    hud.detailsLabelFont = [UIFont boldSystemFontOfSize:16];
     if (success) {
         [hud setMode:MBProgressHUDModeCustomView];
         [hud setCustomView:[[UIImageView alloc] initWithImage:[UIImage bundleImageNamed:@"ic_hud_success"]]];
