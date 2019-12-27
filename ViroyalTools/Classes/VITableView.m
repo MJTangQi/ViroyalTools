@@ -8,8 +8,7 @@
 
 #import "VITableView.h"
 #import <objc/runtime.h>
-
-@import Masonry;
+#import <Masonry/Masonry.h>
 
 @interface VITableView ()
 
