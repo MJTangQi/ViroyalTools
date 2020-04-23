@@ -48,24 +48,25 @@
         if (constructingBlock) {
             return [self POST:urlString
                    parameters:parameters
-    constructingBodyWithBlock:constructingBlock
+                      headers:headers
                      progress:progress
                       success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-                          HTTP_SUCCESS_LOG
-                          if (success) {
-                              success(task, responseObject);
-                          }
-                      }
+                        HTTP_SUCCESS_LOG
+                        if (success) {
+                            success(task, responseObject);
+                        }
+                    }
                       failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-                          HTTP_FAILURE_LOG
-                          if (failure) {
-                              failure(task, error);
-                          }
-                      }];
+                        HTTP_FAILURE_LOG
+                        if (failure) {
+                            failure(task, error);
+                        }
+                    }];
         }
         else {
             return [self POST:urlString
                    parameters:parameters
+                      headers:headers
                      progress:progress
                       success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                           HTTP_SUCCESS_LOG
@@ -103,23 +104,25 @@
         else {
             return [self PUT:urlString
                   parameters:parameters
+                     headers:headers
                      success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-                         HTTP_SUCCESS_LOG
-                         if (success) {
-                             success(task, responseObject);
-                         }
-                     }
+                        HTTP_SUCCESS_LOG
+                        if (success) {
+                            success(task, responseObject);
+                        }
+                    }
                      failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-                         HTTP_FAILURE_LOG
-                         if (failure) {
-                             failure(task, error);
-                         }
-                     }];
+                        HTTP_FAILURE_LOG
+                        if (failure) {
+                            failure(task, error);
+                        }
+                    }];
         }
     }
     else if (method == HttpDelete) {
         return [self DELETE:urlString
                  parameters:parameters
+                    headers:headers
                     success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                         HTTP_SUCCESS_LOG
                         if (success) {
@@ -136,6 +139,7 @@
     else if (method == HttpGet) {
         return [self GET:urlString
               parameters:parameters
+                 headers:headers
                 progress:progress
                  success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                      HTTP_SUCCESS_LOG
